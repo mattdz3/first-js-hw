@@ -31,12 +31,6 @@ var game = ["megaman", "mario", "link"].map(function(play){
 	console.log(play + " is awesome!");
 });
 
-var people = ["Dude", "Bro"];
-
-people.forEach(function(person) {
-	console.log("Hey " + person)	
-});
-
 var thingsIhate = ["Mayo", "School Buses", "Spoilers"];
 
 thingsIhate.map(function(dislike) {
@@ -50,42 +44,47 @@ superHero.map(function(hero) {
 });
 
 
+
+
 var pizza = ["pepperoni", "bacon", "mushrooms", "green peppers"].forEach(function(pizza) {
 	console.log("Put " + pizza + " on my pizza.");
 });
 
+var people = ["Dude", "Bro"];
 
-var car = [ 
-	{make: "BMW"},
-	{model: "Z3"},
-	{Year: 2001},
-];
-
-car.forEach(function(mycar){
-	console.log(mycar);
+people.forEach(function(person) {
+	console.log("Hey " + person)	
 });
 
-car.map(function(parts) {
-	console.log(parts);
+var numberArray = [893, 427, 43];
+
+numberArray.forEach(function(num) {
+	console.log(num + " I like numbers!");
 });
 
+var randomThings = ["Trees", 452, "Hover Boots", "popsicle", 900];
 
-
-var num = [100, 200, 400];
-
-num.forEach(function(number){
-	console.log(number);
+randomThings.forEach(function(things) {
+	console.log(things + " These are all meaningless!");
 });
 
-num.map(function(number){
-	console.log(number + " Numbers!");
+randomThings.forEach(function(stuff) {
+	console.log(stuff + stuff);
 });
 
-num.reduce(function(a , b) {
-	console.log(a + b);
+randomThings.forEach(function(random) {
+	console.log(random + 400);
 });
 
+var addNum = [10, 20, 30]
 
+addNum.forEach(function(num) { 
+	console.log(num);
+
+	addNum.forEach(function(number) {
+		console.log(num * number);
+	});
+});
 
 
 
@@ -109,6 +108,7 @@ var inception = [[20, 40], [80, 160], [320, 640]].reduce(function(e, f){
 var yoDog = ["yo", "yodog", "dog.", ].reduce(function(g, h) {
 	return g + h;
 });
+
 console.log(yoDog + " Yo dog, I put a yo dog inside of your yo dog!");
 
 var backpack = ["8 pockets", "20 zippers", "1 laptop", "100 crackers"].reduce(function(i, j){
@@ -118,6 +118,49 @@ var backpack = ["8 pockets", "20 zippers", "1 laptop", "100 crackers"].reduce(fu
 var phone = ["rings", "vibrates", "plays games"].reduce(function(a, b){
 	return "my phone " + a + b;
 });
+
+
+
+
+
+var car = [ 
+	{make: "BMW"},
+	{model: "Z3"},
+	{Year: 2001},
+];
+
+car.forEach(function(mycar){
+	console.log(mycar);
+});
+
+car.map(function(parts) {
+	console.log(parts);
+});
+
+//reduce does not work on objects
+car.reduce(function(a, b) {
+	return (a + b);
+});
+
+
+
+
+var num = [100, 200, 400];
+
+num.forEach(function(number){
+	console.log(number);
+});
+
+num.map(function(number){
+	console.log(number + " Numbers!");
+});
+
+num.reduce(function(a, b) {
+	console.log(a + b);
+});
+
+
+
 
 
 var myself = {
@@ -147,9 +190,16 @@ myself.legs.map(function(leg){
 	console.log("My legs consist of " + leg);
 });
 
-myself.toArray(function(allofme) {
-	console.log("This is all of me!" + allofme);
+myself.legs.forEach(function(leg) {
+	console.log(leg + " yeah!");
+	console.log("I have " + leg);
 });
+
+var schibby = myself.legs.reduce(function(a, z) {
+	return (a + z);
+});
+
+
 
 
 var house = {
@@ -160,21 +210,27 @@ var house = {
 		backPorch: "Porch talk",
 	},
 
-	inside: {
-		livingRoom: "TV",
-		kitchen: "Dirty dishes everywhere",
-		bedRoom: "Kinda clean",
-	},
+	inside: 
+		["kitchen", "dining room", "bathroom", "living room", "bedroom", "laundry room"],
 };
 
+house.inside.map(function(home) {
+	console.log("My house has a " + home);
+});
+
+house.inside.forEach(function(home) {
+	console.log(home + " YEAH!");
+});
+
+var housereduce = house.inside.reduce(function(a, b) {
+	return (a + b) + "This won't make any sence!";
+});
+
+
+ 
 
 
 
-
-
-var numberArray = [893, 427, 43]
-
-var randomThings = ["Trees", 452, "Hover Boots", "popsicle", 900]
 
 
 
